@@ -8,7 +8,7 @@ und meldet Auffälligkeiten.
 
 | Startseite / Gastscan | Dashboard |
 |-----------------------|-----------|
-| ![Startseite](screenshots/01-startseite.jpg) | ![Dashboard](screenshots/02-dashboard.jpg) |
+| ![Startseite](screenshots/Screenshot%202026-10-12%20083138.png) | ![Dashboard](screenshots/Screenshot%202026-10-12%20083058.png) |
 
 ## Funktionen
 
