@@ -1,0 +1,398 @@
+.panel,
+.stat-card,
+.admin-stat,
+.login-card,
+.page-modal-content {
+    border: 1px solid var(--border);
+    box-shadow: none;
+    transform: none;
+}
+
+.panel:hover,
+.stat-card:hover,
+.admin-stat:hover,
+.login-card:hover,
+.page-modal-content:hover {
+    border-color: #b9c1cd;
+    box-shadow: 0 14px 34px rgba(15, 23, 42, 0.15);
+    transform: translateY(-2px);
+}
+
+.domains-panel tbody td {
+    transition: background 0.16s ease, box-shadow 0.16s ease;
+}
+
+.domains-panel tbody td:hover {
+    background: rgba(170, 0, 0, 0.055);
+    box-shadow: inset 0 1px 0 rgba(170, 0, 0, 0.08), inset 0 -1px 0 rgba(170, 0, 0, 0.08);
+}
+
+.domain-row-actions {
+    text-align: right;
+}
+
+.exclude-domain-button {
+    background: rgba(255, 149, 0, 0.08);
+    border: 1px solid rgba(255, 149, 0, 0.28);
+    border-radius: 8px;
+    color: #a85d00;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: 700;
+    min-height: 32px;
+    padding: 0 10px;
+    transition: background 0.16s ease, box-shadow 0.16s ease, transform 0.16s ease;
+    white-space: nowrap;
+}
+
+.exclude-domain-button:hover {
+    background: rgba(255, 149, 0, 0.16);
+    box-shadow: 0 5px 12px rgba(255, 149, 0, 0.16);
+    transform: translateY(-1px);
+}
+
+.monitor-domain-button {
+    background: rgba(170, 0, 0, 0.08);
+    border: 1px solid rgba(170, 0, 0, 0.28);
+    border-radius: 8px;
+    color: #800;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: 700;
+    min-height: 32px;
+    padding: 0 10px;
+    transition: background 0.16s ease, box-shadow 0.16s ease, transform 0.16s ease;
+    white-space: nowrap;
+}
+
+.monitor-domain-button:hover {
+    background: rgba(170, 0, 0, 0.16);
+    box-shadow: 0 5px 12px rgba(170, 0, 0, 0.16);
+    transform: translateY(-1px);
+}
+
+.mobile-topbar {
+    display: none;
+}
+
+@media (max-width: 750px) {
+    .mobile-topbar {
+        align-items: center;
+        background: rgba(250, 250, 252, 0.96);
+        border-bottom: 1px solid var(--border);
+        display: flex;
+        height: 62px;
+        justify-content: center;
+        left: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 1100;
+    }
+
+    .mobile-topbar strong {
+        font-size: 14px;
+    }
+
+    .mobile-menu-button {
+        display: flex;
+        left: 14px;
+        top: 10px;
+        z-index: 1101;
+    }
+
+    .sidebar {
+        display: flex;
+        left: 0;
+        position: fixed;
+        transform: translateX(-105%);
+        transition: transform 0.22s ease;
+        z-index: 1150;
+    }
+
+    body.mobile-menu-open .sidebar {
+        transform: translateX(0);
+    }
+
+    body.mobile-menu-open::after {
+        background: rgba(15, 23, 42, 0.24);
+        content: "";
+        inset: 0;
+        position: fixed;
+        z-index: 1050;
+    }
+
+    .main {
+        padding-top: 78px;
+    }
+
+    .protected-domain-form {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 10px;
+        padding: 14px;
+    }
+
+    .protected-domain-form input,
+    .protected-domain-form .add-domain-button {
+        font-size: 16px;
+        height: 48px;
+        min-height: 48px;
+        width: 100%;
+    }
+
+    .protected-domain-form input {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .domains-panel table {
+        min-width: 1180px;
+    }
+
+    .exclude-domain-button {
+        min-height: 40px;
+    }
+
+    .monitor-domain-button {
+        min-height: 40px;
+    }
+
+    .scan-info {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        padding: 20px 14px 22px;
+    }
+
+    .scan-donut-area {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .scan-summary {
+        gap: 12px;
+        width: 100%;
+    }
+
+    .scan-info-stat {
+        align-items: center;
+        text-align: center;
+    }
+
+    .scan-stat-label {
+        justify-content: center;
+    }
+
+    .settings-card > .setting-row,
+    .settings-card > .settings-actions {
+        margin-left: 14px;
+        margin-right: 14px;
+    }
+
+    .page-modal-content .settings-actions {
+        align-items: center;
+        gap: 10px;
+        justify-content: center;
+        margin-left: 14px;
+        margin-right: 14px;
+    }
+
+    .page-modal-content .settings-actions .save-settings-button,
+    .page-modal-content .settings-actions .delete-button {
+        flex: 1 1 130px;
+        min-height: 40px;
+    }
+
+    .admin-page-card .table-icon-button {
+        height: 36px;
+        margin-left: 3px;
+        margin-right: 3px;
+        width: 36px;
+    }
+}
+* {
+    border-width: 1.5px !important;
+}
+
+@media (max-width: 750px) {
+    .sidebar {
+        bottom: 0;
+        height: 100svh;
+        max-height: 100svh;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding-bottom: calc(22px + env(safe-area-inset-bottom));
+        top: 0;
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior: contain;
+    }
+
+    @supports (height: 100dvh) {
+        .sidebar {
+            height: 100dvh;
+            max-height: 100dvh;
+        }
+    }
+
+    .sidebar-bottom {
+        flex-shrink: 0;
+        padding-bottom: 4px;
+    }
+
+    html,
+    body {
+        max-width: 100%;
+        overflow-x: hidden;
+        -webkit-text-size-adjust: 100%;
+    }
+
+    .app,
+    .main {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .main {
+        padding: 78px 12px 28px;
+    }
+
+    .login-screen {
+        min-height: 100svh;
+        padding: 16px;
+    }
+
+    .login-card {
+        padding: 24px 18px;
+        width: min(380px, calc(100vw - 32px));
+    }
+
+    .login-card input,
+    .login-card .scan-button {
+        font-size: 16px;
+        min-height: 46px;
+    }
+
+    .login-language-toggle {
+        bottom: max(16px, env(safe-area-inset-bottom));
+        left: 16px;
+        min-height: 44px;
+        z-index: 1300;
+    }
+
+    .mobile-topbar {
+        height: 62px;
+        padding: 0 58px;
+    }
+
+    .mobile-menu-button {
+        min-height: 42px;
+        min-width: 42px;
+        touch-action: manipulation;
+    }
+
+    .sidebar {
+        max-width: min(290px, calc(100vw - 24px));
+        width: min(290px, calc(100vw - 24px));
+    }
+
+    .language-toggle {
+        min-height: 44px;
+        touch-action: manipulation;
+    }
+
+    .header,
+    .panel-header,
+    .standalone-header {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .header-actions,
+    .scan-controls {
+        width: 100%;
+    }
+
+    .scan-controls {
+        flex-wrap: wrap;
+    }
+
+    .panel,
+    .stat-card,
+    .admin-stat,
+    .login-card {
+        border-radius: 12px;
+    }
+
+    .table-container {
+        max-width: 100%;
+        overflow-x: auto;
+    }
+
+    .domains-panel table,
+    .protected-domains-panel table {
+        min-width: 610px;
+    }
+
+    .domains-panel .table-container {
+        max-height: 420px;
+        overflow-y: auto;
+    }
+
+    .form-grid input,
+    .form-grid select,
+    .admin-search,
+    .table-actions input,
+    .table-actions select {
+        font-size: 16px;
+        min-height: 44px;
+    }
+
+    .settings-actions,
+    .protected-domain-form {
+        width: 100%;
+    }
+
+    .notification-settings-card .setting-row,
+    .max-domains-settings-card .setting-row {
+        align-items: center;
+        display: grid;
+        gap: 14px;
+        grid-template-columns: minmax(0, 1fr) 46px;
+    }
+
+    .notification-settings-card .setting-info,
+    .max-domains-settings-card .setting-info {
+        min-width: 0;
+        overflow-wrap: anywhere;
+        width: auto;
+    }
+
+    .notification-settings-card .switch,
+    .max-domains-settings-card .switch {
+        align-self: center;
+        min-height: 26px;
+        min-width: 46px;
+        justify-self: end;
+        width: 46px;
+    }
+
+    .nav-item,
+    .language-toggle-label,
+    .logout-button,
+    .scan-stat-label,
+    .stat-label,
+    .stat-description,
+    .panel-header p,
+    .standalone-header > div > p:last-child {
+        font-weight: 500;
+    }
+
+    .scan-button,
+    .add-domain-button,
+    .save-settings-button,
+    .delete-button {
+        font-weight: 600;
+    }
+}
